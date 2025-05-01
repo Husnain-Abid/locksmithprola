@@ -1,0 +1,84 @@
+/*------------------------------------*\
+    #Awards
+\*------------------------------------*/
+.awards {
+    padding-top   : 116px;
+    padding-bottom: 121px;
+
+    @media #{$maxTablet} {
+        padding-top   : 70px;
+        padding-bottom: 61px;
+    }
+
+    .award {
+
+        @media #{$maxTablet} {
+            max-width: 370px;
+            margin   : 0 auto;
+        }
+
+        &:hover {
+            .award-img {
+                background-color: var(--global--color-primary);
+            }
+        }
+
+        .award-img {
+            padding         : 45px 85px;
+            background-color: #f4f4f4;
+            transition      : 0.3s ease-in-out;
+            display         : flex;
+            justify-content : center;
+            align-items     : center;
+
+            @media #{$noteBook} {
+                padding-left : 45px;
+                padding-right: 45px;
+            }
+
+            @media #{$maxTablet} {
+                padding-left : 40px;
+                padding-right: 40px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .award-content {
+            padding: 29px 0 0;
+
+            @media #{$maxTablet} {
+                text-align: center;
+            }
+
+            .award-title {
+                margin-bottom: 19px;
+
+                a {
+                    font-family   : var(--global--font-heading);
+                    font-weight   : 700;
+                    font-size     : 20px;
+                    line-height   : 26px;
+                    color         : var(--global--color-heading-light);
+                    transition    : 0.3s ease-in-out;
+                    text-transform: capitalize;
+
+                    &:hover {
+                        color: var(--global--color-primary);
+                    }
+                }
+            }
+
+            .award-desc {
+                font-family  : var(--global--font-body);
+                font-weight  : 400;
+                font-size    : 16px;
+                line-height  : 26px;
+                color        : var(--global--color-body);
+                margin-bottom: 0;
+            }
+        }
+    }
+}

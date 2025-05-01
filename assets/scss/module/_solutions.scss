@@ -1,0 +1,119 @@
+/*------------------------------------*\
+# Solutions
+\*------------------------------------*/
+.solutions {
+    padding-top   : 0px;
+    padding-bottom: 0px;
+    position      : relative;
+    overflow      : visible;
+    z-index       : 5;
+    background    : #161616;
+
+    @media #{$maxTablet} {
+        padding-top   : 70px;
+        padding-bottom: 70px;
+    }
+
+    .solutions-wrapper {
+        position: relative;
+
+        @media #{$minLarge} {
+            min-height : 830px;
+            display    : flex;
+            align-items: center;
+        }
+    }
+
+    .solutions-tags {
+        display    : flex;
+        align-items: center;
+        flex-wrap  : wrap;
+
+        @media #{$maxTablet} {
+            justify-content: center;
+            margin-bottom  : 50px;
+        }
+
+        .btn {
+            background-color: #eaeaea;
+            color           : var(--global--color-heading);
+            height          : 58px;
+            width           : auto;
+            margin-bottom   : 20px;
+            margin-right    : 20px;
+            padding         : 0 25px;
+
+            @media (min-width: 992px) and (max-width: 1399.98px) {
+                margin-right: 10px;
+                padding     : 0 20px;
+            }
+
+            &:hover {
+                background-color: var(--global--color-primary);
+                color           : var(--global--color-white);
+            }
+        }
+    }
+
+    .solutions-img-holder {
+        display        : flex;
+        justify-content: center;
+
+        @media #{$minLarge} {
+            justify-content: flex-end;
+            position       : absolute;
+            top            : 0;
+            right          : 0;
+            max-width      : 50%;
+            z-index        : 7;
+        }
+
+        .solutions-img {
+            position: relative;
+
+            @media #{$maxTablet} {
+                margin: 0 auto 0px;
+            }
+
+            img {
+                width        : 100%;
+                border-radius: 0px;
+                height       : 940px;
+                object-fit   : cover;
+                position     : relative;
+                z-index      : 1;
+
+                @media #{$maxTablet} {
+                    max-width: 550px;
+                    height   : 650px;
+                    margin   : 0 auto
+                }
+
+                @media #{$maxSmall} {
+                    max-width: 100%;
+                }
+            }
+
+            .edge-shape {
+                position: absolute;
+                left    : 0;
+                bottom  : 0;
+                z-index : 5;
+                width   : 110px;
+                height  : 110px;
+            }
+
+            .btn--video {
+                width           : 128px;
+                height          : 128px;
+                background-color: var(--global--color-white);
+                position        : absolute;
+                top             : 50%;
+                left            : 50%;
+                transform       : translate(-50%, -50%);
+                box-shadow      : 0px 5px 83px 0px rgba(27, 26, 26, 0.12);
+                z-index         : 5;
+            }
+        }
+    }
+}

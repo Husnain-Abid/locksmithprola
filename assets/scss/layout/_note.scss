@@ -1,0 +1,145 @@
+/*------------------------------------*\
+    #NOTE
+\*------------------------------------*/
+.note {
+    @media #{$maxTablet} {
+        text-align  : center;
+        max-width   : 500px;
+        margin-left : auto;
+        margin-right: auto;
+    }
+
+    p {
+        font-family  : var(--global--font-body);
+        font-weight  : 700;
+        font-size    : 15px;
+        color        : var(--global--color-body);
+        line-height  : 25px;
+        margin-bottom: 0;
+
+        a {
+            position      : relative;
+            font-weight   : 700;
+            color         : var(--global--color-heading);
+            transition    : 0.3s ease-in-out;
+            text-transform: capitalize;
+            display       : inline-flex;
+            align-items   : center;
+
+            &:hover {
+                i {
+                    transform: translateX(5px)
+                }
+            }
+
+            i {
+                @include centerd(26px, 26px, var(--global--color-white));
+                border-radius: 50%;
+                margin-left  : 10px;
+                transition   : 0.3s ease-in-out;
+                font-size    : 9px;
+            }
+        }
+    }
+
+    &.note-light {
+        p {
+            color: #f4f4f4;
+
+            a {
+                color: var(--global--color-primary);
+
+                i {
+                    background-color: var(--global--color-primary);
+                    color           : var(--global--color-heading);
+                }
+            }
+        }
+    }
+
+    &.note-line {
+        p {
+            a {
+                position: relative;
+
+                &:hover {
+                    &::before {
+                        width: 80%;
+                    }
+                }
+
+                &::before {
+                    content         : '';
+                    position        : absolute;
+                    bottom          : 1px;
+                    left            : 50%;
+                    transform       : translateX(-50%);
+                    background-color: var(--global--color-heading);
+                    transition      : 0.3s ease-in-out;
+                    height          : 2px;
+                    width           : 100%;
+                    ;
+                }
+            }
+        }
+    }
+
+    &.note-light-2 {
+        p {
+            color: #c6c6c6;
+
+            a {
+                color: var(--global--color-primary);
+
+                &::before {
+                    background-color: var(--global--color-primary);
+                }
+
+                i {
+                    background-color: var(--global--color-primary);
+                    color           : var(--global--color-heading);
+                }
+            }
+        }
+    }
+
+    &.note-light-3 {
+        p {
+            color: #f9f9f9;
+
+            a {
+                color: var(--global--color-heading);
+
+                &::before {
+                    background-color: var(--global--color-heading);
+                }
+
+                i {
+                    background-color: var(--global--color-heading);
+                    color           : var(--global--color-primary);
+                }
+            }
+        }
+    }
+
+    &.note-light-4 {
+        p {
+            color      : #f9f9f9;
+            font-weight: 400;
+
+            a {
+                color      : var(--global--color-primary);
+                font-weight: 700;
+
+                &::before {
+                    background-color: var(--global--color-primary);
+                }
+
+                i {
+                    background-color: var(--global--color-primary);
+                    color           : var(--global--color-heading);
+                }
+            }
+        }
+    }
+}

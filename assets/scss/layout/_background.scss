@@ -1,0 +1,207 @@
+/*------------------------------------*\
+    #BACKGROUNDS
+\*------------------------------------*/
+
+.bg-theme {
+    background-color: var(--global--color-primary) !important;
+}
+
+.bg-gray {
+    background-color: #f1f5fa !important;
+}
+
+.bg-dark-gray {
+    background-color: #3a3a3a;
+}
+
+.bg-dark {
+    background-color: #222222 !important;
+}
+
+/* Background Image */
+
+.bg-section {
+    position           : relative;
+    overflow           : hidden;
+    z-index            : 1;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    background-position: center center;
+    width              : 100%;
+    height             : 100%;
+}
+
+.bg-parallax {
+    background-attachment: fixed;
+}
+
+.bg-overlay {
+    &:before {
+        content : "";
+        display : inline-block;
+        height  : 100%;
+        left    : 0;
+        position: absolute;
+        top     : 0;
+        width   : 100%;
+        z-index : -1;
+    }
+}
+
+.bg-overlay-2 {
+    &:before {
+        content : "";
+        display : inline-block;
+        height  : 100%;
+        left    : 0;
+        position: absolute;
+        top     : 0;
+        width   : 100%;
+        z-index : 0;
+    }
+}
+
+.bg-overlay-light {
+    &:before {
+        background-color: var(--global--color-white);
+        opacity         : 0.8;
+    }
+}
+
+.bg-overlay-dark {
+    &:before {
+        background-color: rgba(27, 26, 26, 0.149);
+    }
+}
+
+.bg-overlay-dark-2 {
+    &:before {
+        background-image: linear-gradient(90deg, rgba(37, 55, 69, 0) 0%, rgba(22, 22, 22, 0.04) 3%, rgb(22, 22, 22) 80%);
+    }
+}
+
+.bg-overlay-dark-3 {
+    &:before {
+        background-image: linear-gradient(180deg, rgba(37, 55, 69, 0) 0%, rgba(22, 22, 22, 0.84) 0%, rgb(22, 22, 22) 80%);
+    }
+}
+
+.bg-overlay-dark-4 {
+    &:before {
+        background: linear-gradient(rgba(0, 0, 0, 0.877) 0%, rgba(0, 0, 0, 0.85) 6.74%, rgba(0, 0, 0, 0.744) 44.68%, rgba(23, 23, 23, 0.177) 100%);
+    }
+}
+
+.bg-overlay-dark-5 {
+    &:before {
+        background: linear-gradient(rgba(0, 0, 0, 0.877) 0%, rgba(0, 0, 0, 0.85) 6.74%, rgba(0, 0, 0, 0.744) 44.68%, rgba(23, 23, 23, 0.277) 100%);
+    }
+}
+
+
+.bg-overlay-theme-dark {
+    &:before {
+        background: linear-gradient(rgba(29, 101, 185, 0) 0%, rgba(6, 52, 100, 0) 0%, rgba(6, 52, 100, 0) 16.43%, #063464 97.66%, #063464 100%);
+    }
+
+    &::after {
+        content: '';
+        @include overlay(rgba(6, 52, 100, 0.95));
+        z-index: 0;
+    }
+}
+
+
+.bg-overlay-dark-slider {
+    &:before {
+        background: linear-gradient(#0000004e 0%, #2726268b 6.74%, rgba(96, 96, 96, 0) 74.68%, rgba(71, 71, 71, 0.177) 100%);
+    }
+}
+
+.bg-overlay-dark-slider-2 {
+    &:before {
+        background: linear-gradient(rgba(0, 0, 0, 0.877) 0%, rgba(0, 0, 0, 0.95) 6.74%, rgba(0, 0, 0, 0.744) 44.68%, rgba(23, 23, 23, 0.177) 100%);
+    }
+}
+
+.bg-overlay-dark-slider-3 {
+    &:before {
+        background: linear-gradient(rgba(0, 0, 0, 0.877) 0%, rgba(0, 0, 0, 0.85) 6.74%, rgba(0, 0, 0, 0.744) 44.68%, rgba(23, 23, 23, 0.177) 100%);
+    }
+}
+
+
+.bg-overlay-video {
+    &:before {
+        background-image: linear-gradient(180deg, rgba(6, 23, 51, 0) 0%, rgba(29, 42, 77, 0) 62%, rgba(29, 42, 77, 1) 97%);
+    }
+}
+
+/* Background Video */
+.bg-video {
+    position: relative;
+
+    iframe {
+        position  : absolute;
+        top       : 0;
+        left      : 0;
+        right     : 0;
+        object-fit: cover;
+        width     : 100%;
+        height    : 100%;
+        transform : rotateZ(0);
+    }
+
+    h2 {
+        text-transform: capitalize;
+        position      : absolute;
+        top           : 50%;
+        left          : 50%;
+        transform     : translate(-50%);
+        z-index       : 5;
+    }
+}
+
+
+.no-shadow {
+    box-shadow: none !important;
+}
+
+.bg-animate {
+    background-size    : cover;
+    background-position: 0px 0px;
+    background-repeat  : repeat-x;
+    animation          : animatedBackground 30s linear infinite;
+}
+
+@-webkit-keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+}
+
+/* Elements Background */
+.el-bg {
+    height         : 550px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+
+    h2 {
+        color: var(--global--color-white);
+    }
+}

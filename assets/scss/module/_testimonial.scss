@@ -1,0 +1,272 @@
+/*------------------------------------*\
+    #Testimonial
+\*------------------------------------*/
+.testimonial {
+    padding-top   : 93px;
+    padding-bottom: 96px;
+
+    @media #{$maxTablet} {
+        padding-top   : 53px;
+        padding-bottom: 70px;
+    }
+
+    &.testimonial-1 {
+        padding         : 0;
+        background-color: transparent;
+        position        : relative;
+        overflow        : visible;
+        z-index         : 5;
+
+        @media #{$maxTablet} {
+            background-color: var(--global--color-primary);
+        }
+
+        &::before {
+            content         : '';
+            position        : absolute;
+            top             : 0;
+            left            : 0;
+            background-color: var(--global--color-primary);
+            height          : 100%;
+            width           : 50%;
+        }
+
+        .testimonial-wrapper {
+            background-color: var(--global--color-primary);
+            padding-top     : 122px;
+            padding-bottom  : 117px;
+            position        : relative;
+
+            @media #{$maxTablet} {
+                padding-top   : 70px;
+                padding-bottom: 67px;
+            }
+
+            .quote-icon {
+                position : absolute;
+                top      : 0;
+                left     : 0;
+                z-index  : 5;
+                transform: translateY(-28px);
+            }
+
+            .edge-shape {
+                position: absolute;
+                top     : 0;
+                right   : 0;
+                z-index : 5;
+                width   : 110px;
+                height  : 110px;
+
+                @media #{$maxTablet} {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.testimonial-panel {
+    position: relative;
+
+    .testimonial-body {
+        @media #{$maxTablet} {
+            text-align: center;
+        }
+
+        .testimonial-content {
+            p {
+                font-family  : var(--global--font-heading);
+                color        : var(--global--color-heading-darken);
+                font-style   : italic;
+                font-size    : 22px;
+                font-weight  : 600;
+                line-height  : 40px;
+                margin-bottom: 0;
+
+                @media #{$maxSmall} {
+                    font-size  : 19px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+
+}
+
+.testimonials-thumbs-wrapper {
+    display       : flex;
+    align-items   : center;
+    position      : relative;
+    padding-bottom: 37px;
+    margin-bottom : 27px;
+
+    @media #{$maxTablet} {
+        justify-content: center;
+    }
+
+    @media #{$maxSmall} {
+        flex-direction: column;
+        align-items   : center;
+        text-align    : center;
+    }
+
+    &::before {
+        content         : '';
+        position        : absolute;
+        bottom          : 0;
+        left            : 0;
+        width           : 440px;
+        height          : 4px;
+        background-color: #161616;
+
+        @media #{$maxTablet} {
+            left     : 50%;
+            transform: translateX(-50%);
+            max-width: 100%;
+        }
+    }
+
+    .testimonial-thumbs {
+        display     : flex;
+        margin-right: 23px;
+        position    : relative;
+        z-index     : 55;
+
+        @media #{$maxSmall} {
+            margin-right : 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    .testimonial-thumbs-info {
+        .testimonial-thumb {
+            margin-right: 0;
+        }
+    }
+}
+
+
+.testimonial-thumb {
+    flex-shrink : 0;
+    display     : flex;
+    align-items : center;
+    transition  : 0.3s ease-in-out;
+    cursor      : pointer;
+    margin-right: 11px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @media #{$maxTablet} {
+        justify-content: center;
+    }
+
+    &.active {
+        .thumb-img {
+            border-color: #282828;
+        }
+    }
+
+    .thumb-img {
+        padding      : 5px;
+        box-shadow   : 0px 0px 0px 2px rgba(40, 40, 40, 0.004);
+        width        : 55px;
+        height       : 55px;
+        border-radius: 50%;
+        border       : 2px solid transparent;
+        position     : relative;
+        transition   : 0.3s ease-in-out;
+        padding      : 5px;
+
+        img {
+            border-radius: 50%;
+            max-width    : 100%;
+        }
+    }
+
+    .thumb-body {
+        text-transform: capitalize;
+
+        h3 {
+            font-family   : var(--global--font-body);
+            font-size     : 14px;
+            font-weight   : 700;
+            line-height   : 22px;
+            margin-bottom : 3px;
+            color         : var(--global--color-heading-light);
+            text-transform: capitalize;
+        }
+
+        p {
+            font-family   : var(--global--font-body);
+            font-size     : 13px;
+            font-weight   : 400;
+            line-height   : 22px;
+            color         : var(--global--color-heading-light);
+            margin-bottom : 0;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.testimonial-actions {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+
+    @media #{$maxSmall} {
+        flex-direction : column;
+        justify-content: center;
+    }
+
+    .custom-navs {
+        display    : inline-flex;
+        align-items: center;
+        margin-left: 15px;
+
+        @media #{$maxSmall} {
+            margin-left: 0;
+        }
+
+        a {
+            @include centerd(34px, 34px, var(--global--color-heading));
+            border-radius: 50%;
+            transition   : 0.3s ease-in-out;
+            cursor       : pointer;
+
+            &:hover {
+                background-color: #e6eaef;
+
+                i {
+                    color: var(--global--color-heading);
+                }
+            }
+
+            i {
+                font-size : 12px;
+                color     : var(--global--color-white);
+                transition: 0.3s ease-in-out;
+            }
+
+            &.prev {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.section-head {
+    font-family   : var(--global--font-secondary);
+    font-weight   : 400;
+    font-size     : 30px;
+    line-height   : 1;
+    color         : var(--global--color-primary);
+    text-transform: capitalize;
+    margin-bottom : 23px;
+
+    @media #{$maxTablet} {
+        text-align: center;
+    }
+}

@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    #FAQs
+\*------------------------------------*/
+.faqs {
+    padding-top   : 115px;
+    padding-bottom: 103px;
+
+    @media #{$maxTablet} {
+        padding-top   : 65px;
+        padding-bottom: 62px;
+    }
+
+    &.faqs-1 {
+        .note {
+            margin-top: 33px;
+        }
+    }
+
+    &.faqs-2 {
+        padding-top: 115px;
+
+        @media #{$maxTablet} {
+            padding-top: 65px;
+        }
+
+        .note {
+            margin-top: 33px;
+        }
+    }
+}

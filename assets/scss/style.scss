@@ -1,0 +1,67 @@
+//Base 
+@import "base/mixins";
+@import "base/info";
+@import "base/vars";
+@import "base/reset";
+@import "base/base";
+
+//Layout
+@import "layout/typography";
+@import "layout/color";
+@import "layout/animations";
+@import "layout/align";
+@import "layout/grid";
+@import "layout/note";
+@import "layout/blockquotes";
+@import "layout/background";
+@import "layout/breadcrumb";
+@import "layout/buttons";
+@import "layout/forms";
+@import "layout/lists";
+@import "layout/tabs";
+@import "layout/accordion";
+@import "layout/pagination";
+@import "layout/alert";
+@import "layout/backtop";
+@import "layout/popup";
+@import "layout/misc";
+
+//module 
+@import "module/header";
+@import "module/menu";
+@import "module/menu-max991";
+@import "module/menu-min992";
+@import "module/module";
+@import "module/topbar";
+@import 'module/page-title';
+@import 'module/carousel';
+@import 'module/heading';
+@import 'module/hero';
+@import 'module/awards';
+@import 'module/highlights';
+@import 'module/reviews';
+@import 'module/case-study';
+@import 'module/gallery';
+@import 'module/cta';
+@import 'module/counters';
+@import 'module/how-works';
+@import 'module/solutions';
+@import 'module/blog';
+@import 'module/shop';
+@import 'module/team';
+@import 'module/sidebar';
+@import 'module/about';
+@import 'module/banner';
+@import 'module/features';
+@import 'module/pricing';
+@import 'module/faqs';
+@import 'module/contact';
+@import 'module/clients';
+@import 'module/locations';
+@import 'module/careers';
+@import 'module/testimonial';
+@import 'module/video';
+@import 'module/404';
+@import 'module/services';
+@import 'module/industries';
+@import 'module/footer';
